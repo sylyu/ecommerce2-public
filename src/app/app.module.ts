@@ -2,18 +2,54 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HttpService } from './http.service';
 import { HttpClientModule } from '@angular/common/http';
+
+import { BsDropdownModule } from 'ngx-bootstrap';
+
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { ClearanceComponent } from './clearance/clearance.component';
+import { HolidayComponent } from './holiday/holiday.component';
+import { WhatsNewComponent } from './whats-new/whats-new.component';
+import { DollarComponent } from './dollar/dollar.component';
+import { FeaturedComponent } from './featured/featured.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { CartComponent } from './cart/cart.component';
+
+import { FormsModule } from '@angular/forms';
+import { HttpService } from './http.service';
+
+// Administrative Tasks
+import { AddComponent } from './add/add.component';
+import { UpdateComponent } from './update/update.component';
+import { DeleteComponent } from './delete/delete.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    // crud operations
+    AppComponent,
+    AddComponent,
+    UpdateComponent,
+    DeleteComponent,
+    // pages to navigate to 
+    HomeComponent,
+    CategoriesComponent,
+    ClearanceComponent,
+    HolidayComponent,
+    WhatsNewComponent,
+    DollarComponent,
+    FeaturedComponent,
+    SignInComponent,
+    CartComponent,
+    
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    HttpClientModule
+    FormsModule,
+    BsDropdownModule.forRoot()
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]

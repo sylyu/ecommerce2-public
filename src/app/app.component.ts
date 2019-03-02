@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpService } from './http.service';
+import { getLocaleMonthNames } from '@angular/common';
+import { setTheme } from 'ngx-bootstrap/utils';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +9,17 @@ import { HttpService } from './http.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'public';
+  title = '';
 
-  constructor(private _httpService: HttpService)} {
+  constructor(private _httpService: HttpService){
+    // https://valor-software.com/ngx-bootstrap/#/documentation#getting-started
+    setTheme('bs4');
   }
+
+  goProduct() {
+    // navigate to /??
+    window.location.href="/Product"; 
+  }
+
+  
 }

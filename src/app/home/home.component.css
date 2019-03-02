@@ -1,0 +1,9 @@
+.home{
+    border:5px solid greenyellow;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+.errors{
+    color: crimson;
+}

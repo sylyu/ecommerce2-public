@@ -1,0 +1,26 @@
+<div class="add">
+    <p>
+      add works!
+    </p>
+    
+    <form>
+      <table>
+          <th>Product</th>
+          <th>Actions available</th>
+        <!-- , otherwise stupid errors -->
+        <tr *ngFor="let product of products">
+          <td>{{ product.name }}</td>
+          <td>
+            <!-- Needed _id not id, because mongo -->
+            <button [routerLink]="['/edit', product._id]">Edit</button>
+            <button (click)="deleteProduct(product._id)">Delete</button>
+          </td>
+        </tr>
+      </table>
+    
+      <!-- Was giving a fake error in Chrome about ngFor, moved just to guess the cause (at NgForOf.push)
+           dumb error was "Error trying to diff 'object[Object]. Only arrays and iterables are allowed'" -->
+      <button [routerLink]="['/add']">Add a new product</button>
+    </form>
+    
+    </div>
