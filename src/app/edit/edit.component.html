@@ -1,0 +1,63 @@
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+  <h2>Edit Product</h2>
+  <div class="card">
+    <form id="form_edit" (submit)="editProductSubmit()">
+      <br>
+
+      <div *ngIf="errors">
+          <div *ngIf="errors['name']">
+          {{errors['name']['message']}}
+          </div>
+      </div>
+      <label>Name:</label>
+      <input 
+      type="text" placeholder="name" class="text-input"
+      name="editProduct.name" 
+      [(ngModel)]="editProduct.name">
+
+      <div *ngIf="errors">
+          <div *ngIf="errors['description']">
+          {{errors['description']['message']}}
+          </div>
+      </div>
+      <label>Description: </label>
+      <textarea cols="60" rows="3" 
+      type="text" 
+      name="editProduct.description" 
+      [(ngModel)]="editProduct.description"></textarea>
+
+      <div *ngIf="errors">
+          <div *ngIf="errors['price']">
+          {{errors['price']['message']}}
+          </div>
+      </div>
+      <label>Price: </label>
+      <input 
+      type="text" class="text-input"
+      name="editProduct.price" 
+      [(ngModel)]="editProduct.price">
+
+      <div *ngIf="errors">
+          <div *ngIf="errors['unit_in_stock']">
+          {{errors['unit_in_stock']['message']}}
+          </div>
+      </div>
+      <label>Units in Stock: </label>
+      <input 
+      type="text" class="text-input"
+      name="editProduct.unit_in_stock" 
+      [(ngModel)]="editProduct.unit_in_stock">
+      <br>
+      <br>
+      <button class="cancel" [routerLink]="['/home']"> Cancel </button>
+      <input class="submit" type="submit" value="Submit" name="editProductSubmit" />
+      <br>
+      <br>
+    </form>
+  </div>
+</div>
