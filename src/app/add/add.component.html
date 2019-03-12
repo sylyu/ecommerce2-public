@@ -1,26 +1,46 @@
-<div class="add">
-    <p>
-      add works!
-    </p>
-    
-    <form>
-      <table>
-          <th>Product</th>
-          <th>Actions available</th>
-        <!-- , otherwise stupid errors -->
-        <tr *ngFor="let product of products">
-          <td>{{ product.name }}</td>
-          <td>
-            <!-- Needed _id not id, because mongo -->
-            <button [routerLink]="['/edit', product._id]">Edit</button>
-            <button (click)="deleteProduct(product._id)">Delete</button>
-          </td>
-        </tr>
-      </table>
-    
-      <!-- Was giving a fake error in Chrome about ngFor, moved just to guess the cause (at NgForOf.push)
-           dumb error was "Error trying to diff 'object[Object]. Only arrays and iterables are allowed'" -->
-      <button [routerLink]="['/add']">Add a new product</button>
-    </form>
-    
-    </div>
+<br>
+<br>
+<br>
+<br>
+
+<form action="/assets/products/" enctype="multipart/form-data" method="post">
+  <label>Thumbnail: </label>
+  <input 
+  type="file" 
+  name="file-to-upload">
+  
+  <input type="submit" value="Upload">
+</form>  
+
+<!-- import formsModule for ngModule -->
+<form (submit)="addProductSubmit()">
+
+  <!-- <div *ngIf="errors">{{errors['name']['message']}}</div> -->
+
+  <label>Name: </label>
+  <input 
+  type="text" 
+  name="newProduct.name" 
+  [(ngModel)]="newProduct.name">
+
+  <label>Description: </label>
+  <input 
+  type="text" 
+  name="newProduct.description" 
+  [(ngModel)]="newProduct.description">
+
+  <label>Price: </label>
+  <input 
+  type="text" 
+  name="newProduct.price" 
+  [(ngModel)]="newProduct.price">
+
+  <label>Units in stock: </label>
+  <input 
+  type="text" 
+  name="newProduct.unit_in_stock" 
+  [(ngModel)]="newProduct.unit_in_stock">
+
+  <button [routerLink]="['/home']"> Cancel </button>
+  <input type="submit" name="onSubmitNew" value="Submit" />
+</form>

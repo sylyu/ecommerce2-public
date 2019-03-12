@@ -1,28 +1,66 @@
-
+<div class="main">
+<!-- carousel advertisement row -->
+<div class="carousel-row">
+  <!-- this is ngx-bootstrap carousel from https://valor-software.com/ngx-bootstrap/#/carousel-->
+  <carousel>
+    <slide>
+      <img class='img-main-carousel' src="assets/images/carousel/190214__Mickey_Minnnie_Carousel.jpg" alt="first slide" style="display: block; width: 100%;">
+    </slide>
+    <slide>
+      <img class='img-main-carousel' src="assets/images/carousel/190213_Personal_Care_WebCarousel.jpg" alt="second slide" style="display: block; width: 100%;">
+    </slide>
+    <slide>
+      <img class='img-main-carousel' src="assets/images/carousel/190206_BeautyMac_Carousel.jpg" alt="third slide" style="display: block; width: 100%;">
+    </slide>
+  </carousel>
+</div>
+  
+<!-- home page - 4 column rows-->
 <div class="home">
-<p>
-  home works!
-</p>
+  <h3>Shop Bestsellers</h3>
 
-<h5>We have quotes by:</h5>
-<form>
-  <table>
-      <th>Product</th>
-      <th>Actions available</th>
-    <!-- , otherwise stupid errors -->
-    <tr *ngFor="let product of products">
-      <td>{{ product.name }}</td>
-      <td>
-        <!-- Needed _id not id, because mongo -->
-        <button [routerLink]="['/edit', product._id]">Edit</button>
-        <button (click)="deleteProduct(product._id)">Delete</button>
-      </td>
-    </tr>
-  </table>
+  <div id="products" class="row">
 
-  <!-- Was giving a fake error in Chrome about ngFor, moved just to guess the cause (at NgForOf.push)
-       dumb error was "Error trying to diff 'object[Object]. Only arrays and iterables are allowed'" -->
-  <button [routerLink]="['/add']">Add a new product</button>
-</form>
+    <!-- 4 row columns -->
+    <div *ngFor="let product of products" class="col-xs">
+      <div class="thumbnail">
+        <img class='img-main-product' src="assets/images/products/100845-00.jpg" alt="products" />
 
+        <div *ngIf="product._id" class="caption">
+            <!-- alternative way, use <a href="/edit/{{product._id}}">-->
+          <p><a [routerLink]="['/edit', product._id]">{{product.name}} {{product.description}}</a></p>
+
+          <p class="lead">{{price(product)}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>  
+</div>
+
+<!-- route test-->
+<div class="temp">
+    <form>
+      <table>
+          <th>Product Name</th>
+          <th>Product Description</th>
+          <th>Product price</th>
+          <!-- , otherwise stupid errors -->
+          <tr *ngFor="let product of products">
+            <td>{{ product.name }}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ price(product) }}</td>
+
+            <td class='btn-row'>
+              <!-- Needed _id not id, because mongo -->
+              <button class="read-btn" [routerLink]="['/view', product._id]">View</button>
+              <button class="update-button" [routerLink]="['/edit', product._id]">Update</button>
+              <button class="delete-btn" (click)="deleteProduct(product._id)">Delete</button>
+            </td>
+          </tr>
+      </table>
+
+      <button [routerLink]="['/add']">Add a new product</button>
+    </form>
+    <br>
 </div>

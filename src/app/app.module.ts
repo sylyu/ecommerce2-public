@@ -4,7 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
-import { BsDropdownModule } from 'ngx-bootstrap';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { CarouselModule} from 'ngx-bootstrap/carousel';
+import { CurrencyMaskModule } from "ng2-currency-mask";
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -22,17 +24,18 @@ import { HttpService } from './http.service';
 
 // Administrative Tasks
 import { AddComponent } from './add/add.component';
-import { UpdateComponent } from './update/update.component';
-import { DeleteComponent } from './delete/delete.component';
+import { EditComponent } from './edit/edit.component';
+import { ViewComponent } from './view/view.component';
 
 @NgModule({
   declarations: [
-    // crud operations
-    AppComponent,
+    // Administrative pages
     AddComponent,
-    UpdateComponent,
-    DeleteComponent,
+    EditComponent,
+    ViewComponent,
+
     // pages to navigate to 
+    AppComponent,
     HomeComponent,
     CategoriesComponent,
     ClearanceComponent,
@@ -49,7 +52,9 @@ import { DeleteComponent } from './delete/delete.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    CarouselModule.forRoot(),
+    CurrencyMaskModule
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]

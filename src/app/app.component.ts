@@ -16,9 +16,9 @@ export class AppComponent {
     setTheme('bs4');
   }
 
-  goProduct() {
+  goHome() {
     // navigate to /??
-    window.location.href="/Product"; 
+    window.location.href="/Products"; 
   }
 
   

@@ -18,15 +18,20 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.products = [];
-    this.refreshProducts(); 
     this.getProducts();
   }
 
-  refreshProducts(){
-    let observable = this._httpService.getProducts();
-    observable.subscribe(data=>{
-      this.products = data['products'];
-    })
+  // currency format for price of product
+  getPrice(floatNumber) {
+    if (floatNumber) {
+      return floatNumber.toLocaleString('us-US', { style: 'currency', currency: 'USD' });
+    } else {
+      return "--";
+    }
+  }
+
+  price(product) {
+    return this.getPrice(product.price);
   }
 
   getProducts() {
@@ -34,7 +39,6 @@ export class HomeComponent implements OnInit {
     observable.subscribe(data => {
       this.products = data['products'];
       console.log(this.products);
-      //this.authors = (data as any).data;
     });
   }
 

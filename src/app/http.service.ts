@@ -28,7 +28,7 @@ export class HttpService {
   
   // PUT - update Product with ID
   updateProduct(id, editProduct){
-    console.log("update Product with edit Product passed in", editProduct);
+    console.log(`update Product with edit Product passed in ${id} ${id.name} ${id.description} ${id.price} ${id.unit_in_stock}`, editProduct);
     return this._http.put(`/api/products/${id}`, editProduct);
   }
 
