@@ -1,10 +1,97 @@
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="clearance-main">
+
+  <!-- clearance banner row-->
+  <div class="banner-row">
+    <img class="img-clearance-banner" src="/assets/images/banner/Dept_clearance.jpg" alt="clearance-banner" style="display: block; width: 100%;">
+  </div>
 
 
-<p>
-  clearance works!
-</p>
+  <!-- 6 column row with featured clearance items-->
+  <div class="clearance-row">
+    <h4>Clearance</h4>
+    <!-- one -->
+    <div class="clearance-category">
+      <div class="col-sm-2">
+        <div class="thumbnail">
+          
+          <img class='img-clearance-category' src="/assets/images/products/featured-clearance/076151-00.jpg" alt="clearance-category" />
+        <p>Apparel & Accessories</p>
+        </div>
+      </div>
+    </div>
+    <!-- two -->
+    <div class="clearance-category">
+      <div class="col-sm-2">
+        <div class="thumbnail">
+          
+          <img class='img-clearance-category' src="/assets/images/products/featured-clearance/075327-00.jpg" alt="clearance-category" />
+        <p>Beauty</p>
+        </div>
+      </div>
+    </div>
+    <!-- three -->
+    <div class="clearance-category">
+      <div class="col-sm-2">
+        <div class="thumbnail">
+            
+            <img class='img-clearance-category' src="/assets/images/products/featured-clearance/065482-01.jpg" alt="clearance-category" />
+          <p>Toys</p>
+        </div>
+      </div>
+    </div>
+    <!-- four -->
+    <div class="clearance-category">
+      <div class="col-sm-2">
+        <div class="thumbnail">
+            
+            <img class='img-clearance-category' src="/assets/images/products/featured-clearance/061934-00.jpg" alt="clearance-category" />
+          <p>Office, School & Crafts</p>
+        </div>
+      </div>
+    </div>
+    <!-- five -->
+    <div class="clearance-category">
+      <div class="col-sm-2">
+        <div class="thumbnail">
+          
+          <img class='img-clearance-category' src="/assets/images/products/featured-clearance/022833-00.jpg" alt="clearance-category" />
+        <p>Party</p>
+        </div>
+      </div>
+    </div>
+    <!-- six -->
+    <div class="clearance-category">
+      <div class="col-sm-2">
+        <div class="thumbnail">
+            
+            <img class='img-clearance-category' src="/assets/images/products/featured-clearance/073532-00.jpg" alt="clearance-category" />
+          <p>Seasonal</p>
+        </div>
+      </div>
+    </div>
+  </div> <!-- end clearance row-->
+
+  <!-- category page - 4 column rows-->
+  <div class="all-clearance">
+    <h6><span>Clearance</span> / Shop All Clearance</h6>
+  
+    <div id="clearance" class="row">
+
+      <!-- 4 row columns -->
+      <div *ngFor="let product of products" class="col-xs">
+        <div class="thumbnail-2">
+          <img class='img-main-product' src="assets/images/products/all-clearance/067131-00.jpg" alt="products" />
+          <br>
+          <div *ngIf="product._id" class="caption">
+              <!-- alternative way, use <a href="/edit/{{product._id}}">-->
+            <span><a [routerLink]="['/view', product._id]">{{product.name}} {{product.description}}</a></span>
+            <br>
+            <span class="lead">{{price(product)}}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>  
+  </div><!-- end all clearance row-->
+
+</div><!-- end clearance main-->

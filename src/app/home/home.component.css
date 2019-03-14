@@ -1,7 +1,7 @@
-
+/* 
 .errors{
   color: crimson;
-}
+} */
 
 .navbar-fixed-top {
   position: fixed;
@@ -18,7 +18,6 @@
 }
 
 .home{
-    /* border:5px solid greenyellow; */
     border-radius: 10px;
     padding: 10px;
     padding-left: 405px;
