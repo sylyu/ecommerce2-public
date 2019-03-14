@@ -8,7 +8,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
   styleUrls: ['./view.component.css']
 })
 export class ViewComponent implements OnInit {
-  product : any; //** gets one restaurant on this page */
+  product : any; //** gets one product on this page */
 
   constructor(
     private _httpService: HttpService,
@@ -20,6 +20,13 @@ export class ViewComponent implements OnInit {
     // ** gets the products to show on the page
     this.getProduct();
   }
+  price() {
+    if (this.product.price) {
+      return this.product.price.toLocaleString('us-US', { style: 'currency', currency: 'USD' });
+    } else {
+      return "--";
+    }
+  }
 
   // ** get the product from the ID in the URL
   getProduct(){
@@ -30,6 +37,4 @@ export class ViewComponent implements OnInit {
       console.log("Got product: ", this.product);
     })
   }
-
-  deleteProduct(){}
 }

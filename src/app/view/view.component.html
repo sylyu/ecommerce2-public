@@ -14,10 +14,10 @@
       <th>Unit in Stock</th>
     </tr>
     <!-- ** Show each product -->
-    <tr *ngFor="let product of products">
+    <tr>
       <td>{{ product.name }}</td>
       <td>{{ product.description }}</td>
-      <td>{{ product.price }}</td>
+      <td>{{ price() }}</td>
       <td>{{ product.unit_in_stock }}</td>
     </tr>
   </table>

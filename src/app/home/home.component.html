@@ -28,7 +28,7 @@
 
         <div *ngIf="product._id" class="caption">
             <!-- alternative way, use <a href="/edit/{{product._id}}">-->
-          <p><a [routerLink]="['/edit', product._id]">{{product.name}} {{product.description}}</a></p>
+          <p><a [routerLink]="['/view', product._id]">{{product.name}} {{product.description}}</a></p>
 
           <p class="lead">{{price(product)}}</p>
         </div>
