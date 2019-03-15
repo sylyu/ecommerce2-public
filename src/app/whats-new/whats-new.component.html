@@ -1,11 +1,26 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<!-- home page - 4 column rows-->
-<div class="whats-new">
-    <span><a ></a>What's-new! / Shop All What's New!</span>
-  
 
-  </div>
+    <!-- page header-->
+    <div class="header">
+        <h4>What's New!</h4>
+    </div>
+
+  <!-- whats new page - 4 column rows-->
+  <div class="all-whats-new">
+    <h6><span>What's New!</span> / Shop All What's New!</h6>
+
+    <div id="whats-new" class="row">
+
+    <!-- 4 row columns -->
+    <div *ngFor="let product of products" class="col-xs">
+      <div class="thumbnail">
+        <img class='img-main-product' src="assets/images/products/whats-new/099431-00.jpg" alt="products" />
+        <br>
+        <div *ngIf="product._id" class="caption">
+            <!-- alternative way, use <a href="/edit/{{product._id}}">-->
+          <span><a [routerLink]="['/view', product._id]">{{product.name}} {{product.description}}</a></span>
+          <br>
+          <span class="lead">{{price(product)}}</span>
+        </div>
+      </div>
+    </div>
+  </div><!-- end of whats new-->

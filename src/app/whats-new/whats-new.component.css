@@ -1,0 +1,83 @@
+.whats-new{
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 405px;
+    padding-right: 405px;
+    background-color: whitesmoke;
+
+}
+/* header row */
+.header{
+    margin-top: 65px;
+    background-color: white;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 83px;
+    height: 40px;
+}
+h4{
+  font-weight: lighter;
+  font-family: sans-serif;
+  text-align: center;
+}
+/* all whats new row */
+h6{
+  margin-top: 20px;
+  margin-left: 30px;
+  font-weight: normal;
+  color: rgb(48, 49, 49);
+  margin-bottom: 20px;
+  padding-left: 115px;
+}
+
+.all-whats-new{
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 550px;
+  padding-right: 490px;
+  background-color: whitesmoke;
+}
+.col-xs{
+  width: 23%;
+  padding: 3px;
+  border-radius: 0.3rem;
+  height: 100%;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+.thumbnail{
+  margin-top:10px;
+  outline-offset: -5px;
+  border-radius: 5px;
+  height: 250px;
+  margin-bottom:-10px;
+  background-color: white;
+
+}
+span{
+  color: red;
+  align-content: left;
+}
+img{
+  width: 165px;
+}
+.caption{
+  background-color: white;
+  width:100%;
+  font-size: 9px;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-top: 15px;
+  height: 40px;
+}
+.lead{
+  color: orangered;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 0%;
+  vertical-align: text-bottom; 
+}
+a{
+  color: black;
+  justify-content: left;
+}

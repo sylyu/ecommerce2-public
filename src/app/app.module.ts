@@ -26,6 +26,7 @@ import { HttpService } from './http.service';
 import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
 import { ViewComponent } from './view/view.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ViewComponent } from './view/view.component';
     FeaturedComponent,
     SignInComponent,
     CartComponent,
+    FooterComponent,
     
   ],
   imports: [

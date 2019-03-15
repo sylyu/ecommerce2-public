@@ -27,7 +27,6 @@
     "lodash": "^4.17.11",
     "mongoose-float": "^1.0.3",
     "mongoose-money": "^0.2.0",
-    "multer": "^1.4.1",
     "ng2-currency-mask": "^5.3.1",
     "ngx-bootstrap": "^3.2.0",
     "rxjs": "~6.3.3",
@@ -53,5 +52,18 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.6"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sylyu/ecommerce2-public.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sylyu/ecommerce2-public/issues"
+  },
+  "homepage": "https://github.com/sylyu/ecommerce2-public#readme"
 }
