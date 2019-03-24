@@ -3,12 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { HttpService } from './http.service';
 
+
+// dependencies
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CarouselModule} from 'ngx-bootstrap/carousel';
 import { CurrencyMaskModule } from "ng2-currency-mask";
 
+// app router pages
+import { NavbarComponent } from './navbar/navbar.component';
 import { AppComponent } from './app.component';
+import { FooterComponent } from './footer/footer.component';
+import { Footer2Component } from './footer2/footer2.component';
+
+// pages
 import { HomeComponent } from './home/home.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ClearanceComponent } from './clearance/clearance.component';
@@ -19,14 +29,10 @@ import { FeaturedComponent } from './featured/featured.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { CartComponent } from './cart/cart.component';
 
-import { FormsModule } from '@angular/forms';
-import { HttpService } from './http.service';
-
 // Administrative Tasks
 import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
 import { ViewComponent } from './view/view.component';
-import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +42,11 @@ import { FooterComponent } from './footer/footer.component';
     ViewComponent,
 
     // pages to navigate to 
+    NavbarComponent,
     AppComponent,
+    FooterComponent,
+    Footer2Component, 
+
     HomeComponent,
     CategoriesComponent,
     ClearanceComponent,
@@ -46,8 +56,7 @@ import { FooterComponent } from './footer/footer.component';
     FeaturedComponent,
     SignInComponent,
     CartComponent,
-    FooterComponent,
-    
+ 
   ],
   imports: [
     BrowserModule,

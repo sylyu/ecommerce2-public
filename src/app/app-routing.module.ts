@@ -12,6 +12,7 @@ import { FeaturedComponent } from './featured/featured.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { CartComponent } from './cart/cart.component';
 
+
 import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
 import { ViewComponent } from './view/view.component';
@@ -27,7 +28,6 @@ export const routes: Routes         = [
   { path: 'featured', component: FeaturedComponent},
   { path: 'sign-in', component: SignInComponent},
   { path: 'cart', component: CartComponent},
-
   { path: 'add', component: AddComponent},
   { path: 'edit/:_id', component: EditComponent},
   { path: 'view/:_id', component: ViewComponent},
@@ -37,10 +37,7 @@ export const routes: Routes         = [
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes),
-    HttpClientModule
-  ],
+  imports: [RouterModule.forRoot(routes),HttpClientModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

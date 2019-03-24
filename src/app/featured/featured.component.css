@@ -1,0 +1,63 @@
+.home{
+    padding-left: 500px;
+    padding-right: 500px;
+    width: 100%;
+    background-color: pink;
+}
+
+h2{
+    padding-top: 65px;
+}
+.featured-ad{
+    padding-top: 10px;
+}
+
+/* row 2 */
+.second-row{
+    display: flex;
+    padding-top: 15px;
+}
+
+
+.row2-text{
+    text-align: center;
+    padding: 5%;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-size: 11px;
+}
+
+/* row 3 */
+.homedecor-row{
+    display: flex;
+    justify-content: center;
+}
+.col4-ads{
+    width: 735px;
+}
+/* row 4 */
+.forth-row{
+    justify-content: center;
+    display: flex;
+    padding-top: 15px;
+}
+.row4-text{
+    text-align: center;
+    padding: 5%;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-size: 11px;
+}
+/* row 5 */
+.fifth-row{
+    justify-content: center;
+    display: flex;
+    padding-top: 15px;
+}
+.row5-text{
+    text-align: center;
+    padding: 5%;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-size: 11px;
+}

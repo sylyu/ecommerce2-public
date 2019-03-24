@@ -1,9 +1,130 @@
-<br>
-<br>
-<br>
-<br>
-<br>
+ <!-- 1st row with featured dollar items-->
+ <div class="first-row">
+    <h4>$1 Shop</h4>
+    <!-- one -->
+    <div class="dollar-ads">
+      <div class="col-sm-2">
+        <div class="thumbnail">
+          
+          <img class='img-dollar-ads' src="/assets/images/products/dollar-ads/070464-00.jpg" alt="dollar-ads" />
+        <p>$1 Apparel & Accessories</p>
+        </div>
+      </div>
+    </div>
+    <!-- two -->
+    <div class="dollar-ads">
+      <div class="col-sm-2">
+        <div class="thumbnail">
+          
+          <img class='img-dollar-ads' src="/assets/images/products/dollar-ads/077123-00.jpg" alt="dollar-ads" />
+        <p>$1 Baby</p>
+        </div>
+      </div>
+    </div>
+    <!-- three -->
+    <div class="dollar-ads">
+      <div class="col-sm-2">
+        <div class="thumbnail">
+          
+          <img class='img-dollar-ads' src="/assets/images/products/dollar-ads/050139-00.jpg" alt="dollar-ads" />
+        <p>$1 Beauty</p>
+        </div>
+      </div>
+    </div>
+    <!-- four -->
+    <div class="dollar-ads">
+      <div class="col-sm-2">
+        <div class="thumbnail">
+          
+          <img class='img-dollar-ads' src="/assets/images/products/dollar-ads/071587-00_b.jpg" alt="dollar-ads" />
+        <p>$1 Electronics</p>
+        </div>
+      </div>
+    </div>
+    <!-- five -->
+    <div class="dollar-ads">
+      <div class="col-sm-2">
+        <div class="thumbnail">
+          
+          <img class='img-dollar-ads' src="/assets/images/products/dollar-ads/065899-00.jpg" alt="dollar-ads" />
+        <p>$1 Health</p>
+        </div>
+      </div>
+    </div>
+    <!-- six -->
+    <div class="dollar-ads">
+      <div class="col-sm-2">
+        <div class="thumbnail">
+          
+          <img class='img-dollar-ads' src="/assets/images/products/dollar-ads/051509-00.jpg" alt="dollar-ads" />
+        <p>$1 Home & Kitchen</p>
+        </div>
+      </div>
+    </div>
+    <!-- seven -->
+    <div class="dollar-ads">
+      <div class="col-sm-2">
+        <div class="thumbnail">
+          
+          <img class='img-dollar-ads' src="/assets/images/products/dollar-ads/077233-00.jpg" alt="dollar-ads" />
+        <p>$1 Household & Pet</p>
+        </div>
+      </div>
+    </div>
+  </div>  <!-- end 1st row with featured dollar items-->
 
-<p>
-  dollar works!
-</p>
+  <div class="first-row-pt2">
+    <!--eight-->
+    <div class="dollar-ads2">
+        <div class="col-sm-2">
+          <div class="thumbnail">
+            
+            <img class='img-dollar-ads' src="/assets/images/products/dollar-ads/066868-00.jpg" alt="dollar-ads" />
+          <p>$1 Office, School, & Crafts</p>
+          </div>
+        </div>
+      </div>
+      <!-- nine-->
+      <div class="dollar-ads2">
+        <div class="col-sm-2">
+          <div class="thumbnail">
+            
+            <img class='img-dollar-ads' src="/assets/images/products/dollar-ads/070224-00.jpg" alt="dollar-ads" />
+          <p>$1 Toys</p>
+          </div>
+        </div>
+      </div>
+      <!-- ten-->
+      <div class="dollar-ads2">
+        <div class="col-sm-2">
+          <div class="thumbnail">
+            
+            <img class='img-dollar-ads' src="/assets/images/products/dollar-ads/079419-00.jpg" alt="dollar-ads" />
+          <p>$1 Party and Seasonal</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- end 1st row part 2 of with featured dollar items-->
+
+    <!-- category page - 4 column rows-->
+    <div class="all-dollar">
+        <h6><span>$1 Shop</span> / Shop All $1 Shop</h6>
+      
+        <div id="dollar" class="row">
+    
+          <!-- 4 row columns -->
+          <div *ngFor="let product of products" class="col-xs">
+            <div class="thumbnail-2">
+              <img class='img-main-product' src="assets/images/products/dollar-all/003411-00.jpg" alt="products" />
+              <br>
+              <div *ngIf="product._id" class="caption">
+                  <!-- alternative way, use <a href="/edit/{{product._id}}">-->
+                <span><a [routerLink]="['/view', product._id]">{{product.name}} {{product.description}}</a></span>
+                <br>
+                <span class="lead">{{price(product)}}</span>
+              </div>
+            </div>
+          </div>
+    
+        </div>  
+      </div><!-- end all clearance row-->
